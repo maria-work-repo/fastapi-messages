@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Message detail</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Message detail</h1>
+    <p><strong>ID:</strong> {{ message.id }}</p>
+    <p><strong>Message:</strong> {{ message.content }}</p>
+
+    <form action="/web/messages/{{ message.id }}/delete"
+          method="post"
+          onsubmit="return confirm('Are you sure you want to delete this message?');">
+        <button type="submit">Delete</button>
+    </form>
+
+    <a href="/web/messages">Back to list</a>
+</body>
+</html>

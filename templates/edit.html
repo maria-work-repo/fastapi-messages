@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit message</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Edit message</h1>
+
+    <form action="/web/messages/{{ message.id }}/edit" method="post">
+        <label for="content">Message:</label>
+        <textarea id="content" name="content" required>{{ message.content }}</textarea>
+        <button type="submit">Save</button>
+    </form>
+
+    <a href="/web/messages">Back to list</a>
+</body>
+</html>

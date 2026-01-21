@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Create a message</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Create a new message</h1>
+    <form action="/web/messages" method="post">
+        <label for="content">Message:</label>
+        <textarea id="content" name="content" required></textarea>
+        <button type="submit">Sent</button>
+    </form>
+    <a href="/web/messages">Back to list</a>
+</body>
+</html>
